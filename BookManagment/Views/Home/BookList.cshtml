@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BookManagment.EF.BookInfo>
+
+@{
+    ViewBag.Title = "BookList";
+}
+
+<h2>BookList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+           Name
+        </th>
+        <th>
+            Publisher Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Date
+        </th>
+        <th>
+            Page
+        </th>
+        <th>
+           BookType
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @item.Name
+        </td>
+        <td>
+            @item.PublisherName
+        </td>
+        <td>
+            @item.Age
+        </td>
+        <td>
+            @item.Date
+        </td>
+        <td>
+            @item.Page
+        </td>
+        <td>
+            @item.BookType
+        </td>
+        <td>
+            <a href="/Home/EditBook/@item.Id">Edit</a> |
+            <a href="/Home/DeleteBook/@item.Id">Delete</a>
+        </td>
+    </tr>
+}
+
+</table>

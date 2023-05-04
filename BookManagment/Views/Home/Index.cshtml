@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Insert Book Infromation</h2>
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><label for="Name">Name:</label></td>
+            <td><input type="text" id="name" name="Name"></td>
+        </tr>
+        <tr>
+            <td><label for="PublisherName">Publisher name:</label></td>
+            <td><input type="text" id="publisher" name="PublisherName"></td>
+        </tr>
+        <tr>
+            <td><label for="Age">Age:</label></td>
+            <td><input type="text" id="age" name="Age"></td>
+        </tr>
+        <tr>
+            <td><label for="Date">Date:</label></td>
+            <td><input type="date" id="date" name="Date"></td>
+        </tr>
+        <tr>
+            <td><label for="Page">Page:</label></td>
+            <td><input type="text" id="page" name="Page"></td>
+        </tr>
+        <tr>
+            <td><label for="type">Book type:</label></td>
+            <td>
+                <input type="checkbox" id="fiction" name="Type[]" value="fiction">
+                <label for="fiction">Fiction</label>
+                <input type="checkbox" id="non-fiction" name="Type[]" value="non-fiction">
+                <label for="non-fiction">Non-Fiction</label>
+                <input type="checkbox" id="biography" name="Type[]" value="biography">
+                <label for="biography">Biography</label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit">Add Book</button></td>
+        </tr>
+    </table>
+</form>
